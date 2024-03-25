@@ -1,11 +1,38 @@
 import express from "express";
+import { Application } from "express";
+import mongoose from "mongoose";
+import cors from "cors";
 import dotenv from "dotenv";
+// Create the express app and  import the type of app from express;
+export const app: Application = express();
 
+// Cors
+app.use(cors());
+//configure env;
 dotenv.config();
-const app = express();
+// Parser
+app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+// Declare The PORT Like This
+const port: number = 3000;
 
-const port = process.env.PORT || 3000;
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome To JWT Authentication </h1>");
+});
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+// Listen the server
+app.listen(port, async () => {
+  console.log(`🗄️  Server Fire on http:localhost//${port}`);
+
+  // Connect To The Database
+  try {
+    await mongoose.connect(process.env.MONGODB_URL as string);
+    console.log("🛢️  Connected To Database");
+  } catch (error) {
+    console.log("⚠️ Error to connect Database");
+  }
 });
