@@ -1,0 +1,16 @@
+export const routingPaths = {
+  wildCardView: "*",
+  homeView: "/",
+  boardGameView: "/brädspel",
+  rolePlayView: "/rollspel",
+  tcgView: "/tcg",
+  aboutView: "/om-oss",
+  loginView: "/logga-in",
+  registerView: "/registrera",
+  profileView: "/profil",
+  settingsView: "/inställningar",
+  notFoundView: "/404",
+  unauthorizedView: "/401",
+  adminView: "/admin",
+  usersView: "/users",
+};
