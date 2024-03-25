@@ -3,9 +3,12 @@ import { Application } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 // Create the express app and  import the type of app from express;
 export const app: Application = express();
+import userRoutes from "./routes/UserRoutes";
 
+app.use(bodyParser.json());
 // Cors
 app.use(cors());
 //configure env;
@@ -20,9 +23,10 @@ app.use(
 // Declare The PORT Like This
 const port: number = 3000;
 
-app.get("/", (req, res) => {
-  res.send("<h1>Welcome To JWT Authentication </h1>");
-});
+// Routes
+const router = express.Router();
+userRoutes(router);
+app.use("/api", router);
 
 // Listen the server
 app.listen(port, async () => {
