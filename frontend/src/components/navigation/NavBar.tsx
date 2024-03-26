@@ -23,7 +23,7 @@ const NavBar: React.FC = () => {
             <li className="">
               <NavLink
                 key={index}
-                className="content flex items-center justify-center border-solid border-2 m-2 border-teal-600 p-2 w-48 rounded-lg"
+                className="content flex items-center justify-center border-solid border-2 m-2 bg-white border-teal-600 p-2 w-48 rounded-lg"
                 to={link.path}
               >
                 <img src={link.icon} alt="" width="50" className="inline" />
