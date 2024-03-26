@@ -1,15 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { routingPaths } from "../../routes/RoutingPathUrl";
 import about from "../../shared/images/navigation/about.png";
-import dice from "../../shared/images/navigation/dice_t20.png";
 import home from "../../shared/images/navigation/home.png";
 import roleplay from "../../shared/images/navigation/roleplay.png";
 import TCG from "../../shared/images/navigation/TCG.png";
+import boardgame from "../../shared/images/navigation/boardgame.png";
 
 const NavBar: React.FC = () => {
   const navLinks = [
     { path: routingPaths.homeView, text: "Hem", icon: home },
-    { path: routingPaths.boardGameView, text: "Brädspel", icon: dice },
+    { path: routingPaths.boardGameView, text: "Brädspel", icon: boardgame },
     { path: routingPaths.rolePlayView, text: "Rollspel", icon: roleplay },
     { path: routingPaths.tcgView, text: "TCG", icon: TCG },
     { path: routingPaths.aboutView, text: "Om Oss", icon: about },
