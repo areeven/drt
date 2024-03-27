@@ -18,7 +18,7 @@ const NavBar: React.FC = () => {
   return (
     <>
       <div>
-        <ul className="h-48 flex items-center justify-center bg-gradient-to-b from-slate-600 to-white">
+        <ul className="h-48 flex items-center justify-center bg-gradient-to-b from-amber-400 to-white">
           {navLinks.map((link, index) => (
             <li className="">
               <NavLink
