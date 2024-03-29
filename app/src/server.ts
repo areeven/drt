@@ -19,14 +19,14 @@ app.use(
     extended: true,
   })
 );
-const port: number = 3000;
+const port: number = 8000;
 
 const router = express.Router();
 userRoutes(router);
 app.use("/api", router);
 
 app.listen(port, async () => {
-  console.log(`🗄️  Server Fire on http:localhost//${port}`);
+  console.log(`🗄️  Server Fire on http://localhost:${port}`);
 
   try {
     await mongoose.connect(process.env.MONGODB_URL as string);

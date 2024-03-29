@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 export type AuthenticatedContent = {
   authenticatedUser: string;
-  setAuthenticatedUser: (username: string) => void;
+  setAuthenticatedUser: (email: string) => void;
 };
 
 export const UserContext = createContext<AuthenticatedContent>({

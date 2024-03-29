@@ -3,9 +3,26 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
-  email: { type: String, unique: true },
-  password: String,
-  admin: Boolean,
+  email: {
+    type: String,
+    match: [
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+      "Please enter a valid email",
+    ],
+    required: true,
+    unique: true,
+    maxlength: 255,
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: 8,
+    bcrypt: true,
+  },
+  admin: {
+    type: Boolean,
+    required: true,
+  },
   created_at: { type: Date, default: Date.now },
   updated_at: { type: Date, default: Date.now },
 });
