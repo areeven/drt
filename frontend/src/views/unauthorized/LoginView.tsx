@@ -43,11 +43,10 @@ function LoginView() {
         <h1>Sign in</h1>
       </div>
       <div>
-        <h1>{email}</h1>
         <input
           type="text"
           value={email}
-          placeholder="Username"
+          placeholder="Email"
           onChange={(event) => setEmail(event.target.value)}
         />
         <br />
