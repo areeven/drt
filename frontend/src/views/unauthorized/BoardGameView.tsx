@@ -1,4 +1,4 @@
-import boardGameTable from "../../shared/images/boardgames/boardgames_multiple.jpg";
+import boardGameTable from "../../img/boardgames_multiple.jpg";
 
 const BoardGameView: React.FC = () => {
   return (

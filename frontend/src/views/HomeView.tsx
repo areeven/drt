@@ -1,9 +1,10 @@
-import drtLogo from "../shared/images/drt-logo.png";
+import drtLogo from "../img/drt-logo.png";
 
 const HomeView: React.FC = () => {
   return (
     <>
       <div>
+        <div className="text-4xl font-bold">Den rullande tärningen</div>
         <img
           src={drtLogo}
           alt="den rullande tärningen"
